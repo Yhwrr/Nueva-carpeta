@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metropolitan Museum Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <div class="parallax-bg"></div>
+    
+    <!-- Header -->
+    <header class="glass-effect fixed top-0 left-0 right-0 z-50 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <h1 class="text-3xl font-bold text-white gradient-text font-['Playfair_Display']">
+                Met Gallery
+            </h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="./index.html" class="text-white hover:text-amber-300 transition-colors">Inicio</a>
+                <a href="#destacados" class="text-white hover:text-amber-300 transition-colors">Destacados</a>
+                <a href="#artists" class="text-white hover:text-amber-300 transition-colors">Artistas</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center pt-20">
+            <div class="text-center">
+                <h2 class="text-6xl md:text-8xl font-bold text-white mb-6 floating-animation font-['Playfair_Display']">
+                    Descubre el <span class="gradient-text">Arte</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto opacity-90">
+                    Explora las obras maestras del Metropolitan Museum of Art con una experiencia visual única
+                </p>
+                
+                <!-- Search Section -->
+                <div class="glass-effect rounded-full p-2 max-w-2xl mx-auto mb-8">
+                    <div class="flex items-center">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Buscar obras de arte..." 
+                            class="search-input flex-1 px-6 py-4 rounded-full text-white placeholder-gray-300 outline-none"
+                        >
+                        <button 
+                            id="searchBtn" 
+                            class="bg-gradient-to-r from-amber-600 to-yellow-700 text-white px-8 py-4 rounded-full hover:from-amber-700 hover:to-yellow-800 transition-all transform hover:scale-105 pulse-glow"
+                        >
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button class="category-tag" onclick="searchCategory('painting')">Pinturas</button>
+                    <button class="category-tag" onclick="searchCategory('sculpture')">Esculturas</button>
+                    <button class="category-tag" onclick="searchCategory('american')">Arte Americano</button>
+                    <button class="category-tag" onclick="searchCategory('asian')">Arte Asiático</button>
+                    <button class="category-tag" onclick="searchCategory('european')">Arte Europeo</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="loading" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="glass-effect rounded-lg p-8 text-center">
+                <div class="loading-spinner mx-auto mb-4"></div>
+                <p class="text-white text-lg">Cargando obras de arte...</p>
+            </div>
+        </div>
+
+        <section id="results" class="container mx-auto px-4 py-16 hidden">
+            <h3 class="text-4xl font-bold text-white text-center mb-12 font-['Playfair_Display']">
+                Resultados de la Búsqueda
+            </h3>
+            <div id="artGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            
+            </div>
+            
+            <div class="text-center mt-12">
+                <button 
+                    id="loadMoreBtn" 
+                    class="bg-gradient-to-r from-slate-600 to-slate-700 text-white px-8 py-4 rounded-full hover:from-slate-700 hover:to-slate-800 transition-all transform hover:scale-105 hidden"
+                >
+                    Cargar Más Obras
+                </button>
+            </div>
+        </section>
+
+        <section id="destacados" class="container mx-auto px-4 py-16">
+            <h3 class="text-4xl font-bold text-white text-center mb-12 font-['Playfair_Display']">
+                Obras Destacadas
+            </h3>
+            <div id="featuredGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-effect mt-16 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-white opacity-80">
+                © 2025 Met Gallery. Datos proporcionados por 
+                <a href="https://metmuseum.github.io/" class="text-amber-300 hover:text-amber-400 transition-colors">
+                    Metropolitan Museum of Art API
+                </a>
+            </p>
+            <p class="text-white opacity-80"><small>Desarrollado por: Yhwrr Suárez</small></p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
