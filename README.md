@@ -31,6 +31,10 @@ Visita la aplicación en funcionamiento: [Metropolitan Museum Gallery](https://y
 
 ## Capturas de pantalla
 
+![Capturas de pantalla - seccion principal](./img/Header-nav.png)
+![Capturas de pantalla - sobras destacadas](./img/obras_destacadas.png)
+![Capturas de pantalla - artistas](./img/artistas.png)
+![Capturas de pantalla - resultados](./img/resultado.png)
 
 
 ## 🛠️ Tecnologías Utilizadas
