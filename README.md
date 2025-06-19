@@ -29,6 +29,10 @@ Una aplicación web moderna e interactiva para explorar la colección del Metrop
 
 Visita la aplicación en funcionamiento: [Metropolitan Museum Gallery](https://yhwrr.github.io/Nueva-carpeta/)
 
+## Capturas de pantalla
+
+
+
 ## 🛠️ Tecnologías Utilizadas
 
 - **HTML5**: Estructura semántica moderna
